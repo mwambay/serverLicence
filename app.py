@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  # très important pour permettre à l'app Android d'accéder
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Variable de contrôle globale
 APP_ACTIVE = True
