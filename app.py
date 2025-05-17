@@ -21,7 +21,7 @@ def app_status():
         return jsonify({
             'status': 'blocked',
             'message': 'L\'application est désactivée. Veuillez contacter l\'administrateur.'
-        }), 403
+        }), 200
 
 @app.route('/set-status', methods=['POST'])
 def set_status():
